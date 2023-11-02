@@ -16,3 +16,9 @@ link_directories(${PROJECT_SOURCE_DIR}/lib)
 
 # 添加链接库
 target_link_libraries(myExecutable myLib)
+
+# 添加动态库
+add_library(mySharedLib SHARED lib/mySharedLib.cpp)
+
+# 添加链接库
+target_link_libraries(myExecutable mySharedLib)
